@@ -6,10 +6,14 @@ const skills = document.querySelector(".personalSkills")
 
 refs[0].classList.add("colored-link")
 
-function expLinks() {
-    main.style.left = "-400px"
+function transition() {
     main.style.transition = ".4s"
     main.style.transitionTimingFunction = "ease-in"
+}
+
+function expLinks() {
+    main.style.left = "-400px"
+    transition()
     refs[1].style.color = "#ee6817"
     for (const index in refs) {
         let i = Number(index)
@@ -19,6 +23,7 @@ function expLinks() {
 
 function eduLinks() {
     main.style.left = "-1000px"
+    transition()
     refs[2].style.color = "#ee6817"
     for (const index in refs) {
         let i = Number(index)
@@ -28,6 +33,7 @@ function eduLinks() {
 
 function skillsLinks() {
     main.style.left = "-1600px"
+    transition()
     refs[3].style.color = "#ee6817"
     for (const index in refs) {
         let i = Number(index)
@@ -36,6 +42,7 @@ function skillsLinks() {
 }
 refs[0].onclick = () => {
     main.style.left = "200px"
+    transition()
     refs[0].style.color = "#ee6817"
     for (const index in refs) {
         let i = Number(index)
