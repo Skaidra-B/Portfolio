@@ -1,6 +1,24 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+}
 
 .d-flex {
     display: flex;
+}
+
+.align-self {
+    align-self: end;
+}
+
+.space-a {
+    justify-content: space-around;
 }
 
 .column {
@@ -22,8 +40,7 @@ body {
 aside {
     display: flex;
     flex-direction: column;
-    background-color: black;
-    /*color: white;*/
+    background-color: #434242;
     height: 100%;
     position: fixed;
     width: 200px;
@@ -55,13 +72,17 @@ nav {
     cursor: pointer;
     color: #ee6817;
 }
+
 .section:hover {
     cursor: pointer;
 }
 
+a:hover {
+    font-weight: bolder;
+}
 
 .main {
-    background-color: rgba(102, 62, 19, 0.51);
+    color: #282828;
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1.9fr;
@@ -79,7 +100,7 @@ nav {
 .introduction {
     grid-area: introduction;
     align-items: center;
-    background-image: url("https://i.pinimg.com/originals/98/8f/8b/988f8be22952d7990fd9f01a5dff9383.jpg");
+    background-image: url("https://user-images.githubusercontent.com/93827521/160760703-61377a7c-3d87-49bb-8d64-e0b5d12d2979.jpg");
     background-position: center;
     background-size: cover;
 }
@@ -94,18 +115,34 @@ nav {
 .content-padding {
     padding: 50px;
 }
+
 span {
     margin: 5px 0;
 }
+
+.border {
+    border-bottom: 2px solid rgba(235, 235, 235, 0.1);
+}
+
 .item-bb {
-    border-bottom: 4px solid rgba(235, 235, 235, 0.1);
+    border-bottom: 2px solid rgba(235, 235, 235, 0.1);
     padding-bottom: 10px;
+
+}
+
+.name {
+    margin: 20px 0 10px;
+}
+
+.under {
+    margin: 10px 0 0;
 }
 
 .experience {
     grid-area: experience;
-    background-color: rgba(232, 228, 126, 0.73);
+    background-color: #B8B8B8;
 }
+
 .exp-edu-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -115,49 +152,43 @@ span {
 
 .education {
     grid-area: education;
-    background-color: rgba(232, 120, 209, 0.73);
+    background-color: #C0C0C0;
 }
 
 .personalSkills {
     grid-area: personalSkills;
-    background-color: rgba(124, 232, 110, 0.73);
+    background-color: #B8B8B8;
 }
 
 .image {
     grid-area: image;
-    /*width: 1000px;*/
+    background-color: #B8B8B8;
 }
+
 .links {
     color: black;
     text-decoration: none;
 }
-.bottom {
-    /*border-bottom: 1px solid rgba(235, 235, 235, 0.1);*/
-    /*padding: 20px 0;*/
+
+.p-5 {
+    padding: 5px 0;
 }
 
-/*.content {*/
-/*    width: 804px;*/
-/*    overflow-y: scroll;*/
-/*    height: 100%;*/
-/*    float: left;*/
-/*    -webkit-transition: background 0.3s linear;*/
-/*    -moz-transition: background 0.3s linear;*/
-/*    -o-transition: background 0.3s linear;*/
-/*    -ms-transition: background 0.3s linear;*/
-/*    transition: background 0.3s linear;*/
-/*}*/
-
+.p-top-3 {
+    padding-top: 3px;
+}
 
 .title-divider {
-    width: 150px;
+    width: 190px;
     height: 5px;
     background-color: #ee6817;
     margin: 20px 0 50px 0
 }
+
 .mb-20 {
     margin-bottom: 20px;
 }
+
 .colored-link {
     color: #ee6817;
 }
@@ -410,10 +441,7 @@ span {
 /*h2 span {*/
 /*    font-weight: 300*/
 /*}*/
-h3 {
-    font-size: 16px;
-    margin: 50px 0 10px;
-}
+
 
 /*h4 {*/
 /*    font-size: 25px;*/
