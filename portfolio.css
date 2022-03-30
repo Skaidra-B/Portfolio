@@ -17,10 +17,6 @@ h2 {
     align-self: end;
 }
 
-.space-a {
-    justify-content: space-around;
-}
-
 .column {
     flex-direction: column;
 }
@@ -166,12 +162,15 @@ span {
 }
 
 .links {
-    color: black;
+    color: #ee6817;
     text-decoration: none;
 }
 
 .p-5 {
     padding: 5px 0;
+}
+.ml {
+    margin-left: 5px;
 }
 
 .p-top-3 {
