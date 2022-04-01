@@ -1,12 +1,11 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
-    height: 100%;
+    min-height: 100%;
     overflow-x: hidden;
 }
 .container {
-    display: flex;
-    height: 100%;
+    max-height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -48,6 +47,7 @@ nav {
 }
 .general {
     width: 600px;
+    max-height: 100%;
 }
 .introduction {
     grid-area: introduction;
@@ -193,6 +193,9 @@ a:hover {
     }
     .no-events {
         pointer-events: none;
+    }
+    .general {
+        max-width: 100%;
     }
     .main-s {
         height: 400%;
