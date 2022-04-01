@@ -4,19 +4,6 @@ body {
     height: 100%;
     overflow-x: hidden;
 }
-h2 {
-    margin: 0;
-    padding: 0;
-}
-.d-flex {
-    display: flex;
-}
-.align-self {
-    align-self: end;
-}
-.column {
-    flex-direction: column;
-}
 .container {
     display: flex;
     height: 100%;
@@ -31,6 +18,16 @@ aside {
     position: fixed;
     width: 200px;
     z-index: 1;
+}
+.main {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1.9fr;
+    grid-template-rows: 1fr;
+    position: absolute;
+    left: 200px;
+    grid-template-areas:
+    "introduction experience education personalSkills blank"
 }
 nav {
     display: flex;
@@ -49,27 +46,6 @@ nav {
     font-weight: 300;
     color: #aaaaaa;
 }
-.refs:hover {
-    cursor: pointer;
-    color: #ee6817;
-}
-.section:hover {
-    cursor: pointer;
-}
-a:hover {
-    font-weight: bolder;
-}
-.main {
-    color: #282828;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1.9fr;
-    grid-template-rows: 1fr;
-    position: absolute;
-    left: 200px;
-    grid-template-areas:
-    "introduction experience education personalSkills image"
-}
 .general {
     width: 600px;
 }
@@ -85,6 +61,59 @@ a:hover {
     height: auto;
     width: 100%;
     float: left;
+}
+.experience {
+    grid-area: experience;
+    background-color: #B8B8B8;
+}
+.exp-edu-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 20px;
+}
+.education {
+    grid-area: education;
+    background-color: #C0C0C0;
+}
+.personalSkills {
+    grid-area: personalSkills;
+    background-color: #B8B8B8;
+}
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(6, max-content);
+    row-gap: 20px;
+    grid-template-areas:
+     "a b"
+     "c d"
+     "e f"
+     "g h"
+     "j k"
+     "l l"
+}
+.skills-content {
+    grid-area: l;
+}
+.blank {
+    grid-area: blank;
+    background-color: #B8B8B8;
+}
+.title-divider {
+    width: 190px;
+    height: 5px;
+    background-color: #ee6817;
+    margin: 20px 0 50px 0
+}
+.d-flex {
+    display: flex;
+}
+.align-self {
+    align-self: end;
+}
+.column {
+    flex-direction: column;
 }
 .content-padding {
     padding: 50px;
@@ -104,32 +133,6 @@ span {
 .under {
     margin: 10px 0 0;
 }
-.experience {
-    grid-area: experience;
-    background-color: #B8B8B8;
-}
-.exp-edu-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    row-gap: 20px;
-}
-.education {
-    grid-area: education;
-    background-color: #C0C0C0;
-}
-.personalSkills {
-    grid-area: personalSkills;
-    background-color: #B8B8B8;
-}
-.image {
-    grid-area: image;
-    background-color: #B8B8B8;
-}
-.links {
-    color: #ee6817;
-    text-decoration: none;
-}
 .p-5 {
     padding: 5px 0;
 }
@@ -139,35 +142,19 @@ span {
 .p-top-3 {
     padding-top: 3px;
 }
-.title-divider {
-    width: 190px;
-    height: 5px;
-    background-color: #ee6817;
-    margin: 20px 0 50px 0
+h2 {
+    margin: 0;
+    padding: 0;
 }
 .mb-20 {
     margin-bottom: 20px;
 }
+
 .colored-link {
     color: #ee6817;
 }
-.skills {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: repeat(6, max-content);
-    row-gap: 20px;
-    grid-template-areas: "a b"
-                         "c d"
-                         "e f"
-                        "g h"
-                        "j k"
-                        "l l";
-}
-.skills-content {
-    grid-area: l;
-}
 ul {
-    padding: 0 0 0 20px;
+    padding-left: 20px;
     list-style: none;
 }
 ul li::before {
@@ -179,12 +166,46 @@ ul li::before {
     margin-left: -1.2em;
     margin-top: 20px;
 }
+.links {
+    color: #ee6817;
+    text-decoration: none;
+}
+.refs:hover {
+    cursor: pointer;
+    color: #ee6817;
+}
+.section:hover {
+    cursor: pointer;
+}
+a:hover {
+    font-weight: bolder;
+}
 
+@media (max-width: 768px) {
+    .main {
+        display: none;
+    }
+    .d-none {
+        display: none;
+    }
+    .general {
+        width: auto;
+    }
+    .no-events {
+        pointer-events: none;
+    }
+    .main-s {
+        height: 400%;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4, 1fr);
+        position: absolute;
+        left: 0;
+        grid-template-areas:
+    "introduction"
+    "experience"
+    "education"
+    "personalSkills"
+    }
+}
 
-
-/*@media only screen and (max-device-width:768px)   {*/
-/*    .introduction img {*/
-/*        height:auto;*/
-/*        width:auto;*/
-/*    }*/
-/*}*/

@@ -10,7 +10,6 @@ function transition() {
     main.style.transition = ".4s"
     main.style.transitionTimingFunction = "ease-in"
 }
-
 function expLinks() {
     main.style.left = "-400px"
     transition()
@@ -20,7 +19,6 @@ function expLinks() {
         if (i !== 1) refs[i].style.color = "#aaaaaa"
     }
 }
-
 function eduLinks() {
     main.style.left = "-1000px"
     transition()
@@ -30,7 +28,6 @@ function eduLinks() {
         if (i !== 2) refs[i].style.color = "#aaaaaa"
     }
 }
-
 function skillsLinks() {
     main.style.left = "-1600px"
     transition()
